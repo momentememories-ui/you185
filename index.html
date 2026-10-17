@@ -71,7 +71,7 @@
             position: absolute; top: 55%; left: 50%; transform: translate(-50%, -50%);
             z-index: 30; opacity: 0; pointer-events: none; transition: opacity 0.8s;
             display: flex; flex-direction: column; align-items: center;
-            width: 85%; max-width: 300px;
+            width: 85%; max-width: 320px;
             background: var(--box-color); color: var(--text-main);
             padding: 20px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             border: 1px solid rgba(179, 136, 255, 0.3);
@@ -82,11 +82,11 @@
         
         #puzzle-board {
             display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);
-            gap: 2px; width: 240px; height: 300px; 
+            gap: 2px; width: 225px; height: 400px; 
             background: #2a1b40; border-radius: 10px; border: 2px solid #3d265a;
         }
         .puzzle-piece {
-            background-image: url('photo1.jpg'); background-size: 240px 300px;
+            background-image: url('photo1.jpg'); background-size: 225px 400px;
             cursor: pointer; border-radius: 4px; transition: transform 0.2s;
         }
         .puzzle-piece.selected {
@@ -281,7 +281,7 @@
             for (let i = 0; i < rows * cols; i++) {
                 const piece = document.createElement('div'); piece.className = 'puzzle-piece';
                 const row = Math.floor(i / cols); const col = i % cols;
-                piece.style.backgroundPosition = `-${col * (240/3)}px -${row * (300/3)}px`;
+                piece.style.backgroundPosition = `-${col * (225/3)}px -${row * (400/3)}px`;
                 piece.dataset.index = i; piece.onclick = () => onPieceClick(piece); pieces.push(piece);
             }
             shuffle(pieces); pieces.forEach(p => puzzleBoard.appendChild(p));
