@@ -135,6 +135,16 @@
             flex-shrink: 0; 
         }
         
+        /* สไตล์สำหรับเน้นข้อความรักมากๆ */
+        .highlight-love {
+            display: inline-block;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ff80df;
+            text-shadow: 0 0 10px rgba(255, 128, 223, 0.8), 0 0 20px rgba(179, 136, 255, 0.6);
+            margin-top: 8px;
+        }
+
         .photo-frame {
             position: relative; padding: 10px 10px 40px 10px; 
             background: #2a1b40; box-shadow: 0 5px 20px rgba(0,0,0,0.5); border: 1px solid #3d265a;
@@ -215,7 +225,7 @@
 แต่เราไม่ได้อยู่ด้วยกัน
 ไว้ปีต่อๆไปเรามาชดเชยเวลาของปีนี้นะ
 
-รักมากๆนะครับ 🫶🏽🖤
+<span class="highlight-love">รักมากๆนะครับ 🫶🏽🖤</span>
         </div>
         
         <div class="photo-frame" onclick="nextPhoto()">
@@ -237,7 +247,7 @@
             "ธิติอยู่ข้างๆตุ้ยนะ 🫂",
             "ความคิดถึงคงทำให้เปิดอ่าน 🤭",
             "ยอมไม่ขี้เซาเพื่อเธอ 🥺",
-            "รักตัวเองแล้วนะ\nแต่รักเบ้บเหมือนกัน 🖤🤍",
+            "รักตัวเองแล้วนะ<br>แต่รักเบ้บเหมือนกัน 🖤🤍",
             "Wish you were here with me. 🌌"
         ];
 
